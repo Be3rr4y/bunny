@@ -21,45 +21,10 @@ we just come here--}}
 <!---->
 
     <!-- Start: Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center gap-3">
-                    <img src="assets/img/logo.png" alt="Campus Service Portal" class="h-11 w-11">
-                    <div class="hidden sm:block">
-                        <p class="text-sm font-semibold text-slate-900 leading-tight">Campus Service Portal</p>
-                        <p class="text-[11px] text-slate-500">Helpdesk for students and staff</p>
-                    </div>
-                </a>
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-slate-900 text-sm font-medium">Home</a>
-                    <a href="#how-it-works" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">How it works</a>
-                    <a href="#services" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">Services</a>
-                    <a href="#who" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">Who can use it</a>
-                    <a href="contact.html" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">Contact us</a>
-                    <a href="login.html" class="px-5 py-2.5 border border-slate-200 text-slate-900 rounded-lg font-medium text-sm hover:bg-white hover:border-[#2563eb]/40">Sign in</a>
-                    <a href="register.html" class="px-5 py-2.5 bg-[#2563eb] text-white rounded-lg font-medium text-sm hover:bg-[#1d4ed8] glow-blue">Create account</a>
-                </div>
-                <label for="mobile-nav-toggle" class="md:hidden p-2 text-slate-900 cursor-pointer">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </label>
-            </div>
-            <input type="checkbox" id="mobile-nav-toggle" class="peer hidden">
-            <div class="hidden peer-checked:block md:!hidden py-4 border-t border-slate-200">
-                <div class="flex flex-col gap-4">
-                    <a href="index.html" class="text-slate-900 text-sm font-medium">Home</a>
-                    <a href="#how-it-works" class="text-slate-500 hover:text-slate-900 text-sm font-medium">How it works</a>
-                    <a href="#services" class="text-slate-500 hover:text-slate-900 text-sm font-medium">Services</a>
-                    <a href="#who" class="text-slate-500 hover:text-slate-900 text-sm font-medium">Who can use it</a>
-                    <a href="contact.html" class="text-slate-500 hover:text-slate-900 text-sm font-medium">Contact us</a>
-                    <a href="login.html" class="px-5 py-2.5 border border-slate-200 text-slate-900 rounded-lg font-medium text-sm text-center">Sign in</a>
-                    <a href="register.html" class="px-5 py-2.5 bg-[#2563eb] text-white rounded-lg font-medium text-sm text-center">Create account</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    {{-- @include is the same action as copying the code for navigation  buttons
+    --}}
     <!-- End: Header -->
-
+@include('layouts.header')
     <!-- Start: Hero -->
     <section class="relative pt-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -324,51 +289,7 @@ we just come here--}}
     <!-- End: Call to action -->
 
     <!-- Start: Footer -->
-    <footer class="bg-[#1e3a8a] text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="assets/img/logo.png" alt="" class="h-12 w-12">
-                        <span class="font-semibold">Campus Service Portal</span>
-                    </div>
-                    <p class="text-blue-100 text-sm leading-relaxed max-w-sm">The campus helpdesk for repairs, room bookings, and ICT support. Sign in with your campus email.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-6">Quick links</h4>
-                    <ul class="space-y-3 text-sm text-blue-100">
-                        <li><a href="login.html" class="hover:text-white">Sign in</a></li>
-                        <li><a href="register.html" class="hover:text-white">Create account</a></li>
-                        <li><a href="requests/create.html" class="hover:text-white">Open a ticket</a></li>
-                        <li><a href="staff/dashboard.html" class="hover:text-white">Staff inbox</a></li>
-                        <li><a href="contact.html" class="hover:text-white">Contact us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-6">Departments</h4>
-                    <ul class="space-y-3 text-sm text-blue-100">
-                        <li>Estates — Block A, ground floor</li>
-                        <li>ICT Helpdesk — Library, 1st floor</li>
-                        <li>Halls office — Academic block</li>
-                        <li>Hostels office — Gate 2</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-6">Contact</h4>
-                    <ul class="space-y-2 text-sm text-blue-100">
-                        <li><a href="contact.html" class="hover:text-white">helpdesk@campus.ac.ug</a></li>
-                        <li>Estates: 0414 000 210</li>
-                        <li>ICT: 0414 000 211</li>
-                        <li class="text-[#fbbf24] pt-2">Mon–Fri, 8:00am – 5:00pm</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-blue-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-blue-200">
-                <p>© 2026 Campus Service Portal. All rights reserved.</p>
-                <p>Privacy · Acceptable use · Helpdesk policy</p>
-            </div>
-        </div>
-    </footer>
+    @incude('layouts.footer')
     <!-- End: Footer -->
 
   {{--tells laravel stop capturing the content for the yield ends here reason so as it doesnt start capturing another sections content --}} 

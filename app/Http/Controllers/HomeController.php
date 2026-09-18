@@ -9,10 +9,19 @@ class HomeController extends Controller
     /**
      * Display a listing of the resource.
      */
+    //this function runs whenits called in the routes under web.php
     public function index()
     {
         //
         return view('index');
+        
+    }
+
+    //this function is for  the contact session apparently we dont have pages
+     public function contact()
+    {
+        //
+        return view('contact');
         
     }
 
