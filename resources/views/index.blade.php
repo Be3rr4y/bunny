@@ -289,7 +289,8 @@ we just come here--}}
     <!-- End: Call to action -->
 
     <!-- Start: Footer -->
-    @incude('layouts.footer')
+   @incude('layouts.footer')
+    
     <!-- End: Footer -->
 
   {{--tells laravel stop capturing the content for the yield ends here reason so as it doesnt start capturing another sections content --}} 

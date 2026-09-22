@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Route;
 // import home controller path
 // in laravel we dont use import the word use(in samall case)
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
+
 
 Route::get('/', [HomeController::class, 'index']) ->name('index');
 //nickname to mean the url-> name('index')
@@ -23,3 +25,6 @@ Route::get('/', [HomeController::class, 'index']) ->name('index');
 //[HomeController::class, 'contact']- means go the homecontroller file and run the function for this page
 
 Route::get('/contact', [HomeController::class, 'contact']) ->name('contact');
+//need to update contact form with the route nickname for the form action
+//rouTES
+Route::post('/store', [ContactController::class, 'store']) ->name('contact.store');

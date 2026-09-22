@@ -55,14 +55,23 @@
                     <p class="text-xs uppercase tracking-wider text-[#d97706] font-semibold">Send a message</p>
                     <h2 class="text-lg font-semibold mt-1 mb-6">We will reply to your campus email</h2>
 
-                    <form action="contact.html" method="get" class="space-y-4">
+
+{{--updating the form actiion withthe nck name in our web.php the route is what we are putting
+change method to post which sends data to the database--}}
+                    <form action="{{route('contact.store')}}" method="post" class="space-y-4">
+                        {{--close site fogery token its necessary cant submit data--}}
+                   {{--@csfr my error--}}     
+@csrf
+
+
+                   
                         <div>
                             <label for="name" class="block text-sm font-medium text-slate-600 mb-2">Full name</label>
-                            <input type="text" id="name" name="name" required minlength="2" placeholder="Aisha Namuli" class="input-field">
+                            <input type="text" id="name" name="full_name" required minlength="2" placeholder="Aisha Namuli" class="input-field">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-slate-600 mb-2">Campus email</label>
-                            <input type="email" id="email" name="email" required placeholder="aisha.namuli@campus.ac.ug" class="input-field">
+                            <input type="email" id="email" name="campus_email" required placeholder="aisha.namuli@campus.ac.ug" class="input-field">
                         </div>
                         <div>
                             <label for="department" class="block text-sm font-medium text-slate-600 mb-2">Department</label>
@@ -133,8 +142,13 @@
     </section>
     <!-- End: Offices -->
 
-    <!-- Start: Footer -->
-     {{-- the code is centralised iin the blade file for footer under resources/views/layouts--}}
-  @include('layouts.footer')
+
+     <!-- Start: Footer -->
+    @include('layouts.footer')
     <!-- End: Footer -->
+
+  
+     {{-- the code is centralised iin the blade file for footer under resources/views/layouts--}}
+  
+  
 @endsection
